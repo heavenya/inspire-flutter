@@ -1,6 +1,6 @@
 # inspire
 
-### inspire is a mobile application for believers in the christian community to see faith practices that provides practical examples of how they can apply their faith in modern way supported by a bible verses.
+inspire is a mobile application for believers in the christian community to see faith practices that provides practical examples of how they can apply their faith in modern way supported by a bible verses.
 
 ## Getting Started
 
