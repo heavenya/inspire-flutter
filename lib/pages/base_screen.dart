@@ -44,7 +44,9 @@ class _BaseScreenState extends State<BaseScreen> {
     }
   ];
 
-  var i = Random().nextInt(4);
+  //Make sure the (#) is the same as the total amount of Faith Practices
+  var i = Random().nextInt(2); 
+ 
 
   @override
   Widget build(BuildContext context) {
