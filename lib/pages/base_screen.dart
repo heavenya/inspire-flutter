@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
+import 'package:inspire/utilities/globals.dart' as globals;
 
 class BaseScreen extends StatefulWidget {
   @override
@@ -7,47 +7,21 @@ class BaseScreen extends StatefulWidget {
 }
 
 class _BaseScreenState extends State<BaseScreen> {
-  List<Map<String, dynamic>> quotes = [
-    {
-      "title": "Faith Practice",
-      "description":
-          "Help out a stranger in need. If you see someone who is asking for help. Ask them what they need and see if you can be of service.",
-      "color": [
-        Colors.red.shade200,
-        Colors.red.shade600,
-      ],
-    },
-    {
-      "title": "Faith Practice",
-      "description":
-          "When going out to practice a sport that you enjoy try writing down the name of someone you know and to pray for them during your practice",
-      "color": [
-        Colors.blue.shade200,
-        Colors.blue.shade600,
-      ]
-    },
-    {
-      "title": "Faith Practice",
-      "description": "Description 3",
-      "color": [
-        Colors.green.shade200,
-        Colors.green.shade600,
-      ]
-    },
-    {
-      "title": "Faith Pracice",
-      "description": "Description 4",
-      "color": [
-        Colors.purple.shade200,
-        Colors.purple.shade600,
-      ]
-    }
-  ];
+  PageController? _pageController = PageController();
 
-  //Make sure the (#) is the same as the total amount of Faith Practices
-  var i = Random().nextInt(2); 
- 
+  @override
+  void initState() {
+    _pageController = PageController(initialPage: 0);
+    super.initState();
+  }
 
+  @override
+  void dispose() {
+    _pageController?.dispose();
+    super.dispose();
+  }
+
+  bool onTapVal = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,39 +29,107 @@ class _BaseScreenState extends State<BaseScreen> {
         child: InkWell(
           onTap: () {
             setState(() {
-              if (quotes.length - 1 > i) {
-                i = i + 1;
+              if (globals.quotes.length - 1 > globals.i) {
+                globals.i = globals.i + 1;
+                onTapVal = true;
               } else {
-                i = 0;
+                globals.i = 0;
+                onTapVal = true;
               }
             });
           },
-          child: Container(
-            constraints: BoxConstraints.expand(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-            ),
-            padding: EdgeInsets.symmetric(horizontal: 32.0),
-            decoration: BoxDecoration(
-              gradient: RadialGradient(colors: quotes[i]["color"]),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(quotes[i]["title"],
-                    style: Theme.of(context).textTheme.headline6),
-                SizedBox(height: 15.0),
-                Text(
-                  quotes[i]["description"],
-                  textAlign: TextAlign.justify,
-                )
-              ],
+          child: PageView.builder(
+            itemCount: globals.quotes.length,
+            scrollDirection: Axis.vertical,
+            controller: _pageController,
+            itemBuilder: (ctx, index) => Container(
+              constraints: BoxConstraints.expand(
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+              ),
+              padding: EdgeInsets.symmetric(horizontal: 32.0),
+              decoration: BoxDecoration(
+                gradient: RadialGradient(
+                    colors: onTapVal
+                        ? globals.quotes[index]["color"]
+                        : globals.quotes[index]["color"]),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: CircleAvatar(
+                      radius: 40,
+                      backgroundColor: Colors.white,
+                      child: IconButton(
+                          icon: Icon(
+                            Icons.arrow_upward_outlined,
+                            size: 35,
+                          ),
+                          onPressed: () {
+                            gotoPreviousPage();
+                            setState(() {
+                              onTapVal = false;
+                            });
+                          }),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                            onTapVal
+                                ? globals.quotes[globals.i]["title"]
+                                : globals.quotes[index]["title"],
+                            style: Theme.of(context).textTheme.headline6),
+                        SizedBox(height: 15.0),
+                        Text(
+                          onTapVal
+                              ? globals.quotes[globals.i]["description"]
+                              : globals.quotes[index]["description"],
+                          textAlign: TextAlign.justify,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: CircleAvatar(
+                      radius: 40,
+                      backgroundColor: Colors.white,
+                      child: IconButton(
+                        icon: Icon(
+                          Icons.arrow_downward_outlined,
+                          size: 35,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            onTapVal = false;
+                          });
+                          gotoNextPage();
+                        },
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),
       ),
     );
+  }
+
+  gotoNextPage() {
+    _pageController!
+        .nextPage(duration: Duration(milliseconds: 1000), curve: Curves.easeIn);
+  }
+
+  gotoPreviousPage() {
+    _pageController!.previousPage(
+        duration: Duration(milliseconds: 1000), curve: Curves.easeIn);
   }
 }
 
@@ -118,8 +160,8 @@ class ScrollView extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: new RaisedButton(
-        onPressed: () => Scrollable.ensureVisible(dataKey.currentContext),
+      bottomNavigationBar: new ElevatedButton(
+        onPressed: () => Scrollable.ensureVisible(dataKey.currentContext!),
         child: new Text("Scroll to data"),
       ),
     );
