@@ -27,7 +27,7 @@ samples, guidance on mobile development, and a full API reference.
 - Select application option
 - Give the application a name that is all lowercase with _ to seperate the words
 
-### Connecting To Github
+### Connecting To Github With SSH
 
 ```
 git init
@@ -38,10 +38,6 @@ git add --all
 ```
 
 ```
-git remote add orgin https://github.com/heavenya/inspire
-```
-
-```
 git commit -m
 ```
 
@@ -49,9 +45,15 @@ git commit -m
 git branch -M main
 ```
 
+Make Sure to Connect using SSH not HTTPS
+```
+git remote add origin git@github.com:heavenya/inspire.git
+```
+
 ```
 git push -u orgin main
 ```
+
 
 ### Commands
 
