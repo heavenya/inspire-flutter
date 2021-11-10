@@ -21,7 +21,7 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ### Create A New Project
-- To create a new projecct open Flutter folder in VS at the top of the screen select view then command palette then select Flutter:new-project and select application and also give it a name that is all lower case
+- To create a new project open Flutter folder in VS at the top of the screen select view then command palette then select Flutter:new-project and select application and also give it a name that is all lower case
 
 ### Connecting To Github
 
