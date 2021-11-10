@@ -24,7 +24,8 @@ samples, guidance on mobile development, and a full API reference.
 - [To create a new project](https://www.youtube.com/watch?v=QTiMoC99Iw8) open Flutter folder in Visual Studio. 
 - Type cmd + p
 - >Flutter:new-protect
-- give the application a name that is all lowercase
+- Select application option
+- Give the application a name that is all lowercase with _ to seperate the words
 
 ### Connecting To Github
 
