@@ -38,16 +38,15 @@ git add --all
 ```
 
 ```
-git commit -m
+git commit -m "commit description"
 ```
 
 ```
 git branch -M main
 ```
 
-Make Sure to Connect using SSH not HTTPS
 ```
-git remote add origin git@github.com:heavenya/inspire.git
+git remote add origin https://github.com/heavenya/small_group.git
 ```
 
 ```
