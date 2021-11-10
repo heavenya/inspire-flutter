@@ -82,7 +82,7 @@ flutter doctor
 
 ### Technology Stack
 
-- Flutter Framwork Which Is Written In Dart
+- Flutter Framework Which Is Written In Dart
 
 ### Tools
 
