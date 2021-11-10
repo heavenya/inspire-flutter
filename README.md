@@ -38,7 +38,7 @@ git add --all
 ```
 
 ```
-git remote add orgin https://github.com/heavenya/heavenya-dart
+git remote add orgin https://github.com/heavenya/inspire
 ```
 
 ```
