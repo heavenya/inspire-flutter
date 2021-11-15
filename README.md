@@ -20,7 +20,14 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-### Connecting To Github
+### Create A New Project
+- [To create a new project](https://www.youtube.com/watch?v=QTiMoC99Iw8) open Flutter folder in Visual Studio. 
+- Type cmd + p
+- ">Flutter:new-protect"
+- Select application option
+- Give the application a name that is all lowercase with _ to seperate the words
+
+### Connecting To Github With SSH
 
 ```
 git init
@@ -31,11 +38,7 @@ git add --all
 ```
 
 ```
-git remote add orgin https://github.com/heavenya/heavenya-dart
-```
-
-```
-git commit -m
+git commit -m "commit description"
 ```
 
 ```
@@ -43,8 +46,13 @@ git branch -M main
 ```
 
 ```
+git remote add origin https://github.com/heavenya/small_group.git
+```
+
+```
 git push -u orgin main
 ```
+
 
 ### Commands
 
@@ -75,7 +83,7 @@ flutter doctor
 
 ### Technology Stack
 
-- Flutter Framwork Which Is Written In Dart
+- Flutter Framework Which Is Written In Dart
 
 ### Tools
 
