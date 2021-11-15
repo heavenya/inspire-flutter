@@ -90,6 +90,5 @@ flutter doctor
 - [Presentator for Prototype Reference](https://app.presentator.io/#/w5n7gfqm)
 - [Visual Studio Code](https://code.visualstudio.com)
 - [Google Calendar for objectives/meetings](https://calendar.google.com/calendar/u/0?cid=aGVhdmVueWEudXNAZ21haWwuY29t)
-- [Linux For SSL](https://linuxize.com/post/secure-nginx-with-let-s-encrypt-on-centos-7/)
 - [Slack For Communication](https://join.slack.com/t/heavenya/shared_invite/zt-tan426tx-XTzUHxegbN5ZzHY81iwMGw)
 - [Trello For Objectives](https://trello.com/b/BmCeeNK9/development-team)
