@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inspire/utilities/globals.dart' as globals;
+import 'package:url_launcher/url_launcher.dart';
 
 class BaseScreen extends StatefulWidget {
   @override
@@ -22,98 +23,84 @@ class _BaseScreenState extends State<BaseScreen> {
   }
 
   bool onTapVal = false;
+  bool backTitle = false;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Material(
-        child: InkWell(
-          onTap: () {
-            setState(() {
-              if (globals.quotes.length - 1 > globals.i) {
-                globals.i = globals.i + 1;
+    return SafeArea(
+      child: Scaffold(
+        body: Material(
+          child: InkWell(
+            onTap: () {
+              setState(() {
                 onTapVal = true;
-              } else {
-                globals.i = 0;
-                onTapVal = true;
-              }
-            });
-          },
-          child: PageView.builder(
-            itemCount: globals.quotes.length,
-            scrollDirection: Axis.vertical,
-            controller: _pageController,
-            itemBuilder: (ctx, index) => Container(
-              constraints: BoxConstraints.expand(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-              ),
-              padding: EdgeInsets.symmetric(horizontal: 32.0),
-              decoration: BoxDecoration(
-                gradient: RadialGradient(
-                    colors: onTapVal
-                        ? globals.quotes[index]["color"]
-                        : globals.quotes[index]["color"]),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(
-                    child: CircleAvatar(
-                      radius: 40,
-                      backgroundColor: Colors.white,
-                      child: IconButton(
-                          icon: Icon(
-                            Icons.arrow_upward_outlined,
-                            size: 35,
-                          ),
-                          onPressed: () {
-                            gotoPreviousPage();
-                            setState(() {
-                              onTapVal = false;
-                            });
-                          }),
-                    ),
-                  ),
-                  Expanded(
-                    flex: 2,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                            onTapVal
-                                ? globals.quotes[globals.i]["title"]
-                                : globals.quotes[index]["title"],
-                            style: Theme.of(context).textTheme.headline6),
-                        SizedBox(height: 15.0),
-                        Text(
-                          onTapVal
-                              ? globals.quotes[globals.i]["description"]
-                              : globals.quotes[index]["description"],
-                          textAlign: TextAlign.justify,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: CircleAvatar(
-                      radius: 40,
-                      backgroundColor: Colors.white,
-                      child: IconButton(
-                        icon: Icon(
-                          Icons.arrow_downward_outlined,
-                          size: 35,
-                        ),
-                        onPressed: () {
-                          setState(() {
-                            onTapVal = false;
-                          });
-                          gotoNextPage();
-                        },
+                backTitle = !backTitle;
+              });
+            },
+            child: PageView.builder(
+              itemCount: globals.quotes.length,
+              scrollDirection: Axis.vertical,
+              controller: _pageController,
+              itemBuilder: (ctx, index) => Container(
+                constraints: BoxConstraints.expand(
+                  height: MediaQuery.of(context).size.height,
+                  width: MediaQuery.of(context).size.width,
+                ),
+                padding: EdgeInsets.symmetric(horizontal: 32.0),
+                decoration: BoxDecoration(
+                  gradient: RadialGradient(
+                      colors: onTapVal
+                          ? globals.quotes[index]["color"]
+                          : globals.quotes[index]["color"]),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(top: 20),
+                      width: MediaQuery.of(context).size.width,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          IconButton(
+                            onPressed: () {
+                              launchURL();
+                            },
+                            icon: Icon(
+                              Icons.favorite_border_outlined,
+                              size: 35,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
                       ),
                     ),
-                  )
-                ],
+                    Expanded(
+                      flex: 2,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                              onTapVal
+                                  ? backTitle == true
+                                      ? globals.quotes[index]["back_title"]
+                                      : globals.quotes[index]["front_title"]
+                                  : globals.quotes[index]["front_title"],
+                              style: Theme.of(context).textTheme.headline6),
+                          SizedBox(height: 15.0),
+                          Text(
+                            onTapVal
+                                ? backTitle == true
+                                    ? globals.quotes[index]["back_description"]
+                                    : globals.quotes[index]["front_description"]
+                                : globals.quotes[index]["front_description"],
+                            textAlign: TextAlign.justify,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -122,15 +109,9 @@ class _BaseScreenState extends State<BaseScreen> {
     );
   }
 
-  gotoNextPage() {
-    _pageController!
-        .nextPage(duration: Duration(milliseconds: 1000), curve: Curves.easeIn);
-  }
-
-  gotoPreviousPage() {
-    _pageController!.previousPage(
-        duration: Duration(milliseconds: 1000), curve: Curves.easeIn);
-  }
+  void launchURL() async => await canLaunch(globals.url)
+      ? await launch(globals.url)
+      : throw 'Could not launch ${globals.url}';
 }
 
 class ScrollView extends StatelessWidget {
