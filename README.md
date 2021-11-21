@@ -1,6 +1,6 @@
 # Inspire
 
-Inspire is a mobile application for believers in the christian community to view practical examples of faith practices they can apply in a modern way supported by bible verses.
+Inspire is a mobile application for believers in the christian community to view fellowships ideas they can apply in a modern way.
 
 ## Getting Started
 
@@ -84,6 +84,9 @@ flutter doctor
 ### Technology Stack
 
 - Flutter Framework Which Is Written In Dart
+
+### Additional Resources
+- [Reference for how appp was built](https://medium.com/flutter-community/a-deep-dive-into-pageview-in-flutter-with-custom-transitions-581d9ea6dded)
 
 ### Tools
 
