@@ -87,6 +87,7 @@ flutter doctor
 
 ### Additional Resources
 - [Reference for how appp was built](https://medium.com/flutter-community/a-deep-dive-into-pageview-in-flutter-with-custom-transitions-581d9ea6dded)
+- [Reference for push notification integration](https://pub.dev/packages/flutter_local_notifications)
 
 ### Tools
 
