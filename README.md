@@ -1,6 +1,6 @@
 # Inspire
 
-Inspire is a mobile application for believers in the christian community to view fellowships ideas they can apply in a modern way.
+Inspire is a mobile application for believers in the christian community to view fellowship ideas they can try with their friends.
 
 ## Getting Started
 
