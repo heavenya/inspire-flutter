@@ -27,7 +27,7 @@ samples, guidance on mobile development, and a full API reference.
 - Select application option
 - Give the application a name that is all lowercase with _ to seperate the words
 
-### Connecting To Github With SSH
+### Pushing Code To Github
 
 ```
 git init
@@ -50,7 +50,7 @@ git remote add origin https://github.com/heavenya/inspire.git
 ```
 
 ```
-git push -u orgin main
+git push --set-upstream origin main
 ```
 
 
