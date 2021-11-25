@@ -46,7 +46,7 @@ git branch -M main
 ```
 
 ```
-git remote add origin https://github.com/heavenya/small_group.git
+git remote add origin https://github.com/heavenya/inspire.git
 ```
 
 ```
