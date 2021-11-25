@@ -53,6 +53,11 @@ git remote add origin https://github.com/heavenya/inspire.git
 git push --set-upstream origin main
 ```
 
+### Alternatve to git push -u orgin main or 
+
+```
+git push -u orgin main
+```
 
 ### Commands
 
