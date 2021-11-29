@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inspire/Notification%20Service/service.dart';
 import 'package:inspire/utilities/globals.dart' as globals;
 import 'package:url_launcher/url_launcher.dart';
 
@@ -9,9 +10,15 @@ class BaseScreen extends StatefulWidget {
 
 class _BaseScreenState extends State<BaseScreen> {
   PageController? _pageController = PageController();
+  var notifyHelper;
 
   @override
   void initState() {
+    notifyHelper = NotifyHelper();
+    notifyHelper.initializeNotification();
+    notifyHelper.requestIOSPermissions();
+    notifyHelper.showWeeklyAtDayTime();
+    globals.quotes.shuffle();
     _pageController = PageController(initialPage: 0);
     super.initState();
   }
@@ -19,6 +26,7 @@ class _BaseScreenState extends State<BaseScreen> {
   @override
   void dispose() {
     _pageController?.dispose();
+
     super.dispose();
   }
 
@@ -33,6 +41,7 @@ class _BaseScreenState extends State<BaseScreen> {
             onTap: () {
               setState(() {
                 onTapVal = true;
+
                 backTitle = !backTitle;
               });
             },
@@ -64,7 +73,8 @@ class _BaseScreenState extends State<BaseScreen> {
                         children: [
                           IconButton(
                             onPressed: () {
-                              launchURL();
+                              // launchURL();
+                              notifyHelper.showWeeklyAtDayTime();
                             },
                             icon: Icon(
                               Icons.favorite_border_outlined,
@@ -105,6 +115,15 @@ class _BaseScreenState extends State<BaseScreen> {
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Future notificationSelected(String? payload) async {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        content: Text("Notification : $payload"),
       ),
     );
   }

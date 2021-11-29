@@ -5,7 +5,10 @@
 import 'package:flutter/material.dart';
 import 'package:inspire/pages/base_screen.dart';
 
-void main() => runApp(MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
           bodyText2: TextStyle(color: Colors.white, fontSize: 20.0),
         ),
       ),
-      title: 'Welcome to Flutter',
+      title: 'Inspire',
       home: BaseScreen(),
     );
   }
