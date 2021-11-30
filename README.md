@@ -103,7 +103,7 @@ flutter build ios
 - [Reference for push notification integration](https://pub.dev/packages/flutter_local_notifications)
 - [Reference for getting app icons](https://appicon.co)
 - [Reference for builidng iOS release of app](https://docs.flutter.dev/deployment/ios)
-- [Privacy Policy Generator That We Posted On Medium](https://simpleprivacypolicy.org/?gclid=CjwKCAjw0tHoBRBhEiwAvP1GFd_xC72pruEGbHJnwloVJw6AfAHM9zdcp9wdeoKgwNsFxZukYIn4UhoCFL8QAvD_BwE)
+- [Privacy Policy Generator That We Didn't Use](https://simpleprivacypolicy.org/?gclid=CjwKCAjw0tHoBRBhEiwAvP1GFd_xC72pruEGbHJnwloVJw6AfAHM9zdcp9wdeoKgwNsFxZukYIn4UhoCFL8QAvD_BwE)
 
 ### Tools
 
