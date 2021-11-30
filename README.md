@@ -104,7 +104,8 @@ flutter build ios
 - [Reference for getting app icons](https://appicon.co)
 - [Reference for sending the app to the iOS app store.](https://docs.flutter.dev/deployment/ios)
 - [Refernece for sending the app to the Google Play store](https://www.youtube.com/watch?v=g0GNuoCOtaQ)
-- [Privacy Policy Generator That We Didn't Use](https://simpleprivacypolicy.org/?gclid=CjwKCAjw0tHoBRBhEiwAvP1GFd_xC72pruEGbHJnwloVJw6AfAHM9zdcp9wdeoKgwNsFxZukYIn4UhoCFL8QAvD_BwE)
+- [Privacy policy generator that we didn't Use](https://simpleprivacypolicy.org/?gclid=CjwKCAjw0tHoBRBhEiwAvP1GFd_xC72pruEGbHJnwloVJw6AfAHM9zdcp9wdeoKgwNsFxZukYIn4UhoCFL8QAvD_BwE)
+- [Terms of use generator that we didin't use](https://privacyterms.io/terms-conditions-generator/)
 
 ### Tools
 
