@@ -90,9 +90,19 @@ flutter doctor
 
 - Flutter Framework Which Is Written In Dart
 
+### Sending To iOS App Store
+- From vs terminal
+- Use login password for local computer
+```
+flutter build ios
+```
+- https://www.youtube.com/watch?v=fXeDe9tafG8
+
 ### Additional Resources
 - [Reference for how appp was built](https://medium.com/flutter-community/a-deep-dive-into-pageview-in-flutter-with-custom-transitions-581d9ea6dded)
 - [Reference for push notification integration](https://pub.dev/packages/flutter_local_notifications)
+- [Reference for getting app icons](https://appicon.co)
+- [Reference for builidng iOS release of app](https://docs.flutter.dev/deployment/ios)
 
 ### Tools
 
