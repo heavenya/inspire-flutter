@@ -96,7 +96,9 @@ flutter doctor
 ```
 flutter build ios
 ```
-- https://www.youtube.com/watch?v=fXeDe9tafG8
+- [YouTube video for sending the app to the iOS app store.](https://www.youtube.com/watch?v=fXeDe9tafG8)
+
+### Sending To Google Play Store
 
 ### Additional Resources
 - [Reference for how appp was built](https://medium.com/flutter-community/a-deep-dive-into-pageview-in-flutter-with-custom-transitions-581d9ea6dded)
