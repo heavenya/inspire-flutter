@@ -91,7 +91,7 @@ flutter doctor
 - Flutter Framework Which Is Written In Dart
 
 ### Sending To iOS App Store
-- From vs terminal
+- From VS terminal
 - Use login password for local computer
 ```
 flutter build ios
@@ -99,6 +99,14 @@ flutter build ios
 - [YouTube video for sending the app to the iOS app store.](https://www.youtube.com/watch?v=fXeDe9tafG8)
 
 ### Sending To Google Play Store
+- From VS terminal
+'''
+flutter clean
+'''
+
+'''
+flutter build appbundle --release
+'''
 
 ### Additional Resources
 - [Reference for how appp was built](https://medium.com/flutter-community/a-deep-dive-into-pageview-in-flutter-with-custom-transitions-581d9ea6dded)
@@ -106,7 +114,8 @@ flutter build ios
 - [Reference for getting app icons](https://appicon.co)
 - [Reference for sending the app to the iOS app store.](https://docs.flutter.dev/deployment/ios)
 - [Reference for sending the app to the Google Play store](https://www.youtube.com/watch?v=g0GNuoCOtaQ)
-- [Reference 2 for sending the app to the Google Play store](https://medium.com/@psyanite/how-to-sign-and-release-your-flutter-app-ed5e9531c2ac) 
+- [Reference 2 for sending the app to the Google Play store](https://medium.com/@psyanite/how-to-sign-and-release-your-flutter-app-ed5e9531c2ac)
+- -[Refernece 3 for sending the app to the Google Play store](https://stackoverflow.com/questions/51534616/how-to-change-package-name-in-flutter) 
 - [Privacy policy generator that we didn't Use](https://simpleprivacypolicy.org/?gclid=CjwKCAjw0tHoBRBhEiwAvP1GFd_xC72pruEGbHJnwloVJw6AfAHM9zdcp9wdeoKgwNsFxZukYIn4UhoCFL8QAvD_BwE)
 - [Terms of use generator that we didin't use](https://privacyterms.io/terms-conditions-generator/)
 
