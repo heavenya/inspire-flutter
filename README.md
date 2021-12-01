@@ -105,7 +105,8 @@ flutter build ios
 - [Reference for push notification integration](https://pub.dev/packages/flutter_local_notifications)
 - [Reference for getting app icons](https://appicon.co)
 - [Reference for sending the app to the iOS app store.](https://docs.flutter.dev/deployment/ios)
-- [Refernece for sending the app to the Google Play store](https://www.youtube.com/watch?v=g0GNuoCOtaQ)
+- [Reference for sending the app to the Google Play store](https://www.youtube.com/watch?v=g0GNuoCOtaQ)
+- [Reference 2 for sending the app to the Google Play store](https://medium.com/@psyanite/how-to-sign-and-release-your-flutter-app-ed5e9531c2ac) 
 - [Privacy policy generator that we didn't Use](https://simpleprivacypolicy.org/?gclid=CjwKCAjw0tHoBRBhEiwAvP1GFd_xC72pruEGbHJnwloVJw6AfAHM9zdcp9wdeoKgwNsFxZukYIn4UhoCFL8QAvD_BwE)
 - [Terms of use generator that we didin't use](https://privacyterms.io/terms-conditions-generator/)
 
