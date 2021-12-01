@@ -1,4 +1,4 @@
-package com.example.inspire
+package com.heavenya.inspire
 
 import io.flutter.embedding.android.FlutterActivity
 

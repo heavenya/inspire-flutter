@@ -105,7 +105,6 @@
 
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/data/latest.dart' as tz;
-import 'package:timezone/timezone.dart' as tz;
 
 class NotifyHelper {
   FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
@@ -145,6 +144,7 @@ class NotifyHelper {
     var iosChannelSpecifics = IOSNotificationDetails();
     var platformChannelSpecifics = NotificationDetails(
         android: androidChannelSpecifics, iOS: iosChannelSpecifics);
+    // ignore: deprecated_member_use
     await flutterLocalNotificationsPlugin.showWeeklyAtDayAndTime(
       0,
       'INSPIRE',
