@@ -115,7 +115,7 @@ flutter build appbundle --release
 - [Reference for sending the app to the iOS app store.](https://docs.flutter.dev/deployment/ios)
 - [Reference for sending the app to the Google Play store](https://www.youtube.com/watch?v=g0GNuoCOtaQ)
 - [Reference 2 for sending the app to the Google Play store](https://medium.com/@psyanite/how-to-sign-and-release-your-flutter-app-ed5e9531c2ac)
-- -[Refernece 3 for sending the app to the Google Play store](https://stackoverflow.com/questions/51534616/how-to-change-package-name-in-flutter) 
+- [Refernece 3 for sending the app to the Google Play store](https://stackoverflow.com/questions/51534616/how-to-change-package-name-in-flutter) 
 - [Privacy policy generator that we didn't Use](https://simpleprivacypolicy.org/?gclid=CjwKCAjw0tHoBRBhEiwAvP1GFd_xC72pruEGbHJnwloVJw6AfAHM9zdcp9wdeoKgwNsFxZukYIn4UhoCFL8QAvD_BwE)
 - [Terms of use generator that we didin't use](https://privacyterms.io/terms-conditions-generator/)
 
