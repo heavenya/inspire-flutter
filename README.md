@@ -112,6 +112,7 @@ flutter pub get
 flutter build appbundle --release
 ```
 - Go into /Users/Your_User_Name/Documents/GitHub/inspire/build/app/outputs/bundle/release/app-release.aab
+- Add it to release production for create [release app bundle](https://play.google.com/console/u/0/developers/7927132658135855370/app/4976283006490081760/tracks/4698269767694297279/releases/2/prepare)
 
 
 
