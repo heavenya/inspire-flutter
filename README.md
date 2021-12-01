@@ -100,13 +100,20 @@ flutter build ios
 
 ### Sending To Google Play Store
 - From VS terminal
-'''
+```
 flutter clean
-'''
+```
 
-'''
+```
+flutter pub get
+```
+
+```
 flutter build appbundle --release
-'''
+```
+- Go into /Users/Your_User_Name/Documents/GitHub/inspire/build/app/outputs/bundle/release/app-release.aab
+
+
 
 ### Additional Resources
 - [Reference for how appp was built](https://medium.com/flutter-community/a-deep-dive-into-pageview-in-flutter-with-custom-transitions-581d9ea6dded)
