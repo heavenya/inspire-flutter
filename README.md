@@ -28,6 +28,7 @@ samples, guidance on mobile development, and a full API reference.
 - Give the application a name that is all lowercase with _ to seperate the words
 
 ### Pushing Code To Github
+- Ideally install the app on your desktop 
 
 ```
 git init
