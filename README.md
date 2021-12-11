@@ -134,4 +134,3 @@ flutter build appbundle --release
 - [Visual Studio Code](https://code.visualstudio.com)
 - [Google Calendar for objectives/meetings](https://calendar.google.com/calendar/u/0?cid=aGVhdmVueWEudXNAZ21haWwuY29t)
 - [Slack For Communication](https://join.slack.com/t/heavenya/shared_invite/zt-tan426tx-XTzUHxegbN5ZzHY81iwMGw)
-- [Trello For Objectives](https://trello.com/b/BmCeeNK9/development-team)
