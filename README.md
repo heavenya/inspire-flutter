@@ -2,6 +2,15 @@
 
 Inspire is a fellowship idea generation app for believers to have fellowship ideas to experience together.
 
+## Ideas To Add
+- Ice Skating
+- Roller Blading
+- Movie
+- Axe Throwing
+- Snowboarding or Skiing Trip
+- White Elephant Gift
+- Musical Chairs
+
 ## Getting Started
 
 ### [Install Flutter On Your Computer](https://www.youtube.com/watch?v=YVaFoCiQ2SI)
