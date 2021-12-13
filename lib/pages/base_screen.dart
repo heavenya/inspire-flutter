@@ -73,7 +73,7 @@ class _BaseScreenState extends State<BaseScreen> {
                         children: [
                           IconButton(
                             onPressed: () {
-                              // launchURL();
+                              launchURL();
                               notifyHelper.showWeeklyAtDayTime();
                             },
                             icon: Icon(
