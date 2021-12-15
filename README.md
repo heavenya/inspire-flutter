@@ -128,6 +128,7 @@ flutter build appbundle --release
 - [Refernece 3 for sending the app to the Google Play store](https://stackoverflow.com/questions/51534616/how-to-change-package-name-in-flutter) 
 - [Privacy policy generator that we didn't Use](https://simpleprivacypolicy.org/?gclid=CjwKCAjw0tHoBRBhEiwAvP1GFd_xC72pruEGbHJnwloVJw6AfAHM9zdcp9wdeoKgwNsFxZukYIn4UhoCFL8QAvD_BwE)
 - [Terms of use generator that we didn't use](https://privacyterms.io/terms-conditions-generator/)
+- [Sourcing color shades for options on cards](https://api.flutter.dev/flutter/material/Colors-class.html) 
 
 ### Tools
 
