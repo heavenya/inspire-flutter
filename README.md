@@ -126,7 +126,8 @@ flutter build appbundle --release
 - [Reference 2 for sending the app to the iOS app store. Use cmd + r to run the project from X Code](https://www.youtube.com/watch?v=fXeDe9tafG8&t=686s)
 - [Reference for sending the app to the Google Play store](https://www.youtube.com/watch?v=g0GNuoCOtaQ)
 - [Reference 2 for sending the app to the Google Play store](https://medium.com/@psyanite/how-to-sign-and-release-your-flutter-app-ed5e9531c2ac)
-- [Refernece 3 for sending the app to the Google Play store](https://stackoverflow.com/questions/51534616/how-to-change-package-name-in-flutter) 
+- [Refernece 3 for sending the app to the Google Play store. Also consider checking unlisted part 3 youtube video](https://stackoverflow.com/questions/51534616/how-to-change-package-name-in-flutter)
+- [Reference For Keystore Generation](https://docs.flutter.dev/deployment/android)
 - [Privacy policy generator that we didn't Use](https://simpleprivacypolicy.org/?gclid=CjwKCAjw0tHoBRBhEiwAvP1GFd_xC72pruEGbHJnwloVJw6AfAHM9zdcp9wdeoKgwNsFxZukYIn4UhoCFL8QAvD_BwE)
 - [Terms of use generator that we didn't use](https://privacyterms.io/terms-conditions-generator/)
 - [Sourcing color shades for options on cards](https://api.flutter.dev/flutter/material/Colors-class.html) 
@@ -138,10 +139,36 @@ flutter build appbundle --release
 - Select Product
 - Select Archive
 - Select Distribute App and click through
-- Open [apple developer website](https://appstoreconnect.apple.com/apps/)
+- Open Default Browser [apple developer website](https://appstoreconnect.apple.com/apps/)
 - Select submit for review
 
 ### Updating Android App Store
+- Open VS Code
+- Open Browser [Google Play Developer](https://play.google.com/console/u/0/developers/7927132658135855370/app/4976283006490081760/tracks/4698269767694297279/releases/2/prepare)
+- Open Folder android/app/build.gradle increase versionCode and versionName by 1 
+- Open **VS Code** Terminal enter code below (Only inside VS Code not computer terminal)
+
+```
+keytool -genkey -v -keystore ~/nutella.jks -keyalg RSA -keysize 2048 -validity 10000 -alias nutella
+```
+- Go to users folder and get the upload-keystore.jks file then open VS Code and drag it into the folder android/app
+- Open Folder android and create key.properties file and copy these 4 fields in a line then enter the info do not share on this repo
+- storePassword=
+- keyPassword=
+- keyalias=nutella
+- storeFile< location of key store file such as users/ <username/>
+- Open Personal Password Vault To Fill Out This Info
+- Or just re add file from computer
+- Open In VS Code android/app/build.gradle
+- Open VS Code Terminal enter codes below
+
+```
+flutter clean
+```
+
+```
+flutter build appbundle --release
+```
 - 
 
 ### Tools
