@@ -145,7 +145,7 @@ flutter build appbundle --release
 ### Updating Android App Store
 - Open VS Code
 - Open Browser [Google Play Developer](https://play.google.com/console/u/0/developers/7927132658135855370/app/4976283006490081760/tracks/4698269767694297279/releases/2/prepare)
-- Open Folder android/app/build.gradle increase versionCode and versionName by 1 
+- Open Folder android/app/build.gradle increase versionCode and versionName for example versionCode 2 to 2 and versionName 1.1 to 1.2 or if bug 1.1 to 1.1.1
 - Open **VS Code** Terminal enter code below (Only inside VS Code not computer terminal)
 
 ```
@@ -154,7 +154,7 @@ keytool -genkey -v -keystore ~/nutella.jks -keyalg RSA -keysize 2048 -validity 1
 - Go to users folder and get the upload-keystore.jks file then open VS Code and drag it into the folder android/app
 - Open Folder android and create key.properties file and copy these 4 fields in a line then enter the info do not share on this repo
 - storePassword=
-- keyPassword=
+- keyPassword= 
 - keyalias=nutella
 - storeFile< location of key store file such as users/ <username/>
 - Open Personal Password Vault To Fill Out This Info
@@ -169,7 +169,11 @@ flutter clean
 ```
 flutter build appbundle --release
 ```
-- 
+-  Follow this path build/app/outputs/bundle/release/app-release.aab
+-  Open Browser [Google Play Developer](https://play.google.com/console/u/0/developers/7927132658135855370/app/4976283006490081760/tracks/4698269767694297279/releases/2/prepare)
+-  From VS Code select control + right click tap reveal in finder
+-  Drag file app-release.aab in
+- delete the code from computer and re pull from github app
 
 ### Tools
 
