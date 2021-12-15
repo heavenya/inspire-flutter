@@ -131,6 +131,19 @@ flutter build appbundle --release
 - [Terms of use generator that we didn't use](https://privacyterms.io/terms-conditions-generator/)
 - [Sourcing color shades for options on cards](https://api.flutter.dev/flutter/material/Colors-class.html) 
 
+### Updating iOS App Store
+- Open X Code
+- Open Project Path
+- Hover on top menu
+- Select Product
+- Select Archive
+- Select Distribute App and click through
+- Open [apple developer website](https://appstoreconnect.apple.com/apps/)
+- Select submit for review
+
+### Updating Android App Store
+- 
+
 ### Tools
 
 - [Presentator for Prototype Reference](https://app.presentator.io/#/w5n7gfqm)
