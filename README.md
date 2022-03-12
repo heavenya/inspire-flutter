@@ -57,7 +57,7 @@ git push --set-upstream origin main
 ### Alternatve option to git push --set-upstream origin main
 
 ```
-git push -u orgin main
+git push -u origin main
 ```
 
 ### Commands
