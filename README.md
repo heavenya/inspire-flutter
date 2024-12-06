@@ -95,7 +95,7 @@ flutter doctor
 - From VS terminal
 - Use login password for local computer
 ```
-flutter build ios
+flutter build ios --release
 ```
 - [YouTube video for sending the app to the iOS app store.](https://www.youtube.com/watch?v=fXeDe9tafG8)
 
